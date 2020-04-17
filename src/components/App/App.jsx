@@ -1,28 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, NavLink, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Quotes from "pages/Quotes";
 import Episodes from "pages/Episodes";
-import Characters from "pages/Character";
+import Characters from "pages/Characters";
+import Background from "components/Background";
 
 const App = () => {
   return (
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <NavLink to="episodes">Episodes</NavLink>
-          </li>
-          <li>
-            <NavLink to="characters">Characters</NavLink>
-          </li>
-          <li>
-            <NavLink to="quotes">Quotes</NavLink>
-          </li>
-        </ul>
-      </nav>
-
+      <Background />
       <Switch>
-        <Route path="/" component={Episodes} />
+        <Route exact path="/" component={Episodes} />
         <Route path="/characters" component={Characters} />
         <Route path="/quotes" component={Quotes} />
       </Switch>
