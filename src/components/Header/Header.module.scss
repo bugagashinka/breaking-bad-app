@@ -1,0 +1,35 @@
+@import "src/styles/mixins.scss";
+
+.header {
+  position: relative;
+  padding: 25px 0;
+  background: #2d4f37;
+  background: linear-gradient(-45deg, #2c9048 0%, #2d683f 50%, #2d4f37 100%);
+}
+.title {
+  position: absolute;
+  font-family: "Breaking Bad";
+  font-size: 60px;
+  color: #fffcfc;
+  margin: 0;
+  left: 10%;
+  top: 20%;
+
+  &__part1 {
+    position: absolute;
+  }
+  &__part2 {
+    position: absolute;
+    right: -135px;
+    top: 45px;
+  }
+}
+.inner {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 50px 0;
+}
+.menu {
+  @include horizontal-list(25px, #fff);
+}

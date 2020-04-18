@@ -1,0 +1,16 @@
+.form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  transform: translateY(50%);
+}
+.field,
+.button {
+  padding: 8px 12px;
+  border: none;
+}
+.button {
+  cursor: pointer;
+}
