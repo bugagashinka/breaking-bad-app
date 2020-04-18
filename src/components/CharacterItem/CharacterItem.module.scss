@@ -1,0 +1,10 @@
+@import "../../styles/mixins";
+
+.card {
+  @include card-base;
+  background-color: #fcfcfc;
+  &__image {
+    height: 280px;
+    @include response-image;
+  }
+}
