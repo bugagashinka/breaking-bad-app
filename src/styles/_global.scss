@@ -46,3 +46,7 @@ body,
 a {
   text-decoration: none;
 }
+
+@function item-width($row-count, $item-margin) {
+  @return calc((100% - #{$row-count} * #{$item-margin} * 2) / #{$row-count});
+}
