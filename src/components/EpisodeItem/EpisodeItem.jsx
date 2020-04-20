@@ -2,7 +2,7 @@ import React from "react";
 import stl from "./EpisodeItem.module.scss";
 import { item } from "../List/List.module.scss";
 import classNames from "classnames";
-import { SEASON_POSTERS } from "utils/const";
+import { SEASON_POSTERS } from "utils";
 import { Link } from "react-router-dom";
 
 const TITLE_LENGTH_LIMIT = 16;

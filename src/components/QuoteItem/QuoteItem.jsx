@@ -1,9 +1,8 @@
 import React from "react";
 import stl from "./QuoteItem.module.scss";
+import { getRandomInt } from "utils";
 
 const QuoteItem = ({ id, quote, author }) => {
-  const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
-
   const generateRandomPoints = (minSpread, maxSpread) => {
     let points = {};
     points.close = `${getRandomInt(-4, 50)},${getRandomInt(minSpread, maxSpread)}`;

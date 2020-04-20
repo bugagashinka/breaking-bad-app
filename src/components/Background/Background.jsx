@@ -3,7 +3,7 @@ import stl from "./Background.module.scss";
 import caffeine from "assets/images/caffeine_structure.svg";
 import meth from "assets/images/methamphetamine_structure.svg";
 import lsd from "assets/images/lsd_structure.svg";
-import SmokeEffect from "utils/smokeEffect";
+import { SmokeEffect } from "utils";
 
 const Background = () => {
   const smokeHolder = useRef(null);
