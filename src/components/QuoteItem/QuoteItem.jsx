@@ -40,12 +40,12 @@ const QuoteItem = ({ id, quote, author }) => {
         <path className={stl.quote__strokePath} d={`${bottomStroke}`} fill="none" />
       </svg>
       {
-        <blockquotes className={stl.quote__content}>
+        <blockquote className={stl.quote__content}>
           <p className={stl.quote__text}>{quote}</p>
           <a className={stl.quote__author} href="#">
             &mdash; {author}
           </a>
-        </blockquotes>
+        </blockquote>
       }
     </div>
   );

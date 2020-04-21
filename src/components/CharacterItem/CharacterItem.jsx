@@ -3,7 +3,7 @@ import stl from "./CharacterItem.module.scss";
 import { item } from "../List/List.module.scss";
 import classNames from "classnames";
 
-const CharacterItem = ({ data: { name, img } }) => {
+const CharacterItem = ({ name, img }) => {
   const cardStyles = classNames(`${stl.card}`, `${item}`);
   return (
     <div className={cardStyles}>
