@@ -10,7 +10,10 @@ export default class BBService {
   async getResource(endpoint) {
     const res = await fetch(`${BASE}${endpoint}${SERIES}`);
     if (!res.ok) {
-      throw new Error(`Could not fetch ${endpoint}, received ${res.status}`);
+      const error = new Error(`Could not fetch ${endpoint}, received ${res.status}`);
+      error.code = res.status;
+      console.error(error);
+      throw error;
     }
 
     return await res.json();

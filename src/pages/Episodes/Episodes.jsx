@@ -5,22 +5,41 @@ import List from "components/List";
 import EpisodeItem from "components/EpisodeItem";
 import { BBService } from "services";
 import Spinner from "components/Spinner";
+import ErrorMessage from "components/ErrorMessage";
 
 const Episodes = () => {
   const breakingBadApi = new BBService();
-  const [episodes, updateEpisodes] = useState([]);
-  const [loading, changeLoadingStatus] = useState(true);
 
-  const onLoaded = (data) => {
-    changeLoadingStatus(!loading);
-    updateEpisodes(data);
-  };
+  const [state, setState] = useState({
+    episodes: [],
+    isLoading: true,
+    error: null,
+  });
+  const { episodes, isLoading, error } = state;
+
+  const onLoaded = (data) =>
+    setState((prev) => ({
+      ...prev,
+      isLoading: false,
+      episodes: data,
+    }));
+
+  const onError = (err) =>
+    setState((prev) => ({
+      ...prev,
+      isLoading: false,
+      error: err,
+    }));
 
   useEffect(() => {
-    breakingBadApi.getAllEpisodes().then(onLoaded);
+    breakingBadApi.getAllEpisodes().then(onLoaded).catch(onError);
   }, []);
 
-  const content = !loading ? (
+  const errorElement = error ? <ErrorMessage /> : null;
+  const loaderElement = isLoading ? <Spinner /> : null;
+
+  const showContent = !(isLoading || error);
+  const content = showContent ? (
     <List>
       {episodes.map(({ id, ...data }) => (
         <EpisodeItem key={id} {...data} />
@@ -28,14 +47,13 @@ const Episodes = () => {
     </List>
   ) : null;
 
-  const loader = loading ? <Spinner /> : null;
-
   return (
     <section className="wrapper">
       <Header />
       <section className="content">
         {content}
-        {loader}
+        {errorElement}
+        {loaderElement}
       </section>
       <Footer />
     </section>
