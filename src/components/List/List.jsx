@@ -2,11 +2,7 @@ import React from "react";
 import stl from "./List.module.scss";
 
 const List = ({ children }) => {
-  return (
-    <section className="container">
-      <div className={stl.list}>{children}</div>
-    </section>
-  );
+  return <div className={stl.list}>{children}</div>;
 };
 
 export default List;

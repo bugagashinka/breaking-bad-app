@@ -29,7 +29,7 @@ const GeneralPages = (props) => {
   const loaderElement = isLoading ? <Spinner /> : null;
 
   const renderList = () => {
-    const listContent = itemList.map((item) => renderItem(item));
+    const listContent = itemList.map(({ id, ...data }) => React.createElement(renderItem, { key: id, ...data }));
     return grid ? <List>{listContent}</List> : listContent;
   };
 
