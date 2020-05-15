@@ -1,6 +1,7 @@
 import React from "react";
 import stl from "./QuoteItem.module.scss";
 import { getRandomInt } from "utils";
+import { Link } from "react-router-dom";
 
 const QuoteItem = ({ id, quote, author }) => {
   const generateRandomPoints = (minSpread, maxSpread) => {
@@ -42,9 +43,9 @@ const QuoteItem = ({ id, quote, author }) => {
       {
         <blockquote className={stl.quote__content}>
           <p className={stl.quote__text}>{quote}</p>
-          <a className={stl.quote__author} href="#">
+          <Link className={stl.quote__author} to={`/characters/${author.replace(" ", "+")}`}>
             &mdash; {author}
-          </a>
+          </Link>
         </blockquote>
       }
     </div>

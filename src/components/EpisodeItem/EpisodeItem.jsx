@@ -1,6 +1,6 @@
 import React from "react";
 import stl from "./EpisodeItem.module.scss";
-import { item } from "../List/List.module.scss";
+import { item as list__item } from "../List/List.module.scss";
 import classNames from "classnames";
 import { SEASON_POSTERS } from "utils";
 import { Link } from "react-router-dom";
@@ -9,12 +9,12 @@ const TITLE_LENGTH_LIMIT = 16;
 
 const EpisodesItem = (props) => {
   const { title, season, episode, date, characters } = props;
-  const cardStyles = classNames(`${stl.card}`, `${item}`);
+  const cardStyles = classNames(`${stl.card}`, `${list__item}`);
   const imagePath = `url(${SEASON_POSTERS[season - 1]})`;
 
   const castList = characters.map((person, id, list) => {
     return (
-      <Link key={id} className={stl.link} to="/characters">
+      <Link key={id} className={stl.link} to={`/characters/${person.replace(" ", "+")}`}>
         {person}
         {id === list.length - 1 ? "." : ","}
       </Link>

@@ -12,7 +12,7 @@ const App = () => {
       <Background />
       <Switch>
         <Route exact path="/" component={Episodes} />
-        <Route path="/characters" component={Characters} />
+        <Route path="/characters/:charName?" component={Characters} />
         <Route path="/quotes" component={Quotes} />
         <Route path="*">
           <Error code="404" />

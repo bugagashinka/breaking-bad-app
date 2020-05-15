@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import stl from "./GeneralPage.module.scss";
 import ErrorMessage from "components/ErrorMessage";
 import Spinner from "components/Spinner";
@@ -8,29 +8,34 @@ import Footer from "components/Footer";
 import classNames from "classnames";
 
 const GeneralPages = (props) => {
+  const selectedListItem = useRef(null);
   const [state, setState] = useState({
     itemList: [],
     isLoading: true,
     error: null,
   });
-  const { getData, renderItem, grid = true } = props;
+  const { getData, renderItem, selected, grid = true } = props;
   const { itemList, isLoading, error } = state;
   const contentSectionStyles = classNames("content", { [stl.content_indent]: !grid });
-
   const onLoaded = (itemList) => setState((prevState) => ({ ...prevState, isLoading: false, itemList }));
 
   const onError = (error) => setState((prevState) => ({ ...prevState, isLoading: false, error }));
 
   useEffect(() => {
     getData().then(onLoaded).catch(onError);
+    if (selectedListItem.current) {
+      selectedListItem.current.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
   }, []);
 
   const errorElement = error ? <ErrorMessage /> : null;
   const loaderElement = isLoading ? <Spinner /> : null;
 
   const renderList = () => {
-    const listContent = itemList.map(({ id, ...data }) => React.createElement(renderItem, { key: id, ...data }));
-    return grid ? <List>{listContent}</List> : listContent;
+    const contentList = itemList.map(({ id, ...data }) =>
+      React.createElement(renderItem, { key: id, ...data, ref: selectedListItem, isActive: selected === id })
+    );
+    return grid ? <List>{contentList}</List> : contentList;
   };
 
   const hasContent = !(error || isLoading);

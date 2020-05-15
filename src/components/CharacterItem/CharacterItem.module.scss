@@ -3,6 +3,11 @@
 .card {
   @include card-base;
   background-color: #fcfcfc;
+
+  &.active {
+    border-color: #2b99d6;
+  }
+
   &__image {
     height: 280px;
     @include response-image;

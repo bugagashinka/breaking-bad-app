@@ -4,11 +4,12 @@ const BASE = "https://www.breakingbadapi.com/api/";
 const CHARACTER_ENDPOINT = "characters/";
 const EPISODE_ENDPOINT = "episodes/";
 const QUOTE_ENDPOINT = "quotes/";
-const SERIES = "?series=Breaking+Bad";
+const SERIES_PARAM = "?series=Breaking+Bad";
+const NAME_PARAM = "&name=";
 
 class BBService {
-  getResource = async (endpoint) => {
-    const res = await fetch(`${BASE}${endpoint}${SERIES}`);
+  getResource = async (endpoint, params = "") => {
+    const res = await fetch(`${BASE}${endpoint}${SERIES_PARAM}${params}`);
     if (!res.ok) {
       const error = new Error(`Could not fetch ${endpoint}, received ${res.status}`);
       error.code = res.status;
@@ -19,9 +20,9 @@ class BBService {
     return await res.json();
   };
 
-  getCharacter = async (id) => {
-    const charater = await this.getResource(`${CHARACTER_ENDPOINT}${id}`);
-    return this._transformCharacter(charater);
+  getCharacter = async (name) => {
+    const charater = await this.getResource(`${CHARACTER_ENDPOINT}`, `${NAME_PARAM}${name}`);
+    return this._transformCharacter(...charater);
   };
 
   getAllCharacters = async () => {
