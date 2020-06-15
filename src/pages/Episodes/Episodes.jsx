@@ -1,10 +1,18 @@
 import React from "react";
 import EpisodeItem from "components/EpisodeItem";
 import { BBService } from "services";
-import GeneralPage from "pages/GeneralPage";
+import List from "components/List";
+import { withData, withGeneralLayout } from "hoc";
+import { compose } from "utils";
 
-const Episodes = () => {
-  return <GeneralPage getData={BBService.getAllEpisodes} renderItem={EpisodeItem} />;
+const Episodes = ({ data: episodes }) => {
+  return (
+    <List>
+      {episodes.map(({ id, ...data }) => (
+        <EpisodeItem key={id} {...data} />
+      ))}
+    </List>
+  );
 };
 
-export default Episodes;
+export default compose(withData(BBService.getAllEpisodes), withGeneralLayout())(Episodes);

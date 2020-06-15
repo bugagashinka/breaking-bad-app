@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CharacterItem from "components/CharacterItem";
-import stl from "./Characters.module.scss";
 import { BBService } from "services/";
-import GeneralPage from "pages/GeneralPage";
 import { withRouter } from "react-router-dom";
+import { compose } from "utils";
+import List from "components/List";
+import { withData, withGeneralLayout } from "hoc";
 
-const Characters = (props) => {
-  const [activeChar, setActiveChar] = useState(null);
-  useEffect(() => {
-    const charName = props.match.params.charName;
-    if (charName && !activeChar) {
-      BBService.getCharacter(charName).then((char) => {
-        setActiveChar(char.id);
-      });
-    }
-  }, [activeChar]);
-  return <GeneralPage getData={BBService.getAllCharacters} renderItem={CharacterItem} selected={activeChar} />;
+const Characters = ({ data: characters, match: { params } }) => {
+  return (
+    <List>
+      {characters.map(({ id, name, ...data }) => {
+        return <CharacterItem key={id} {...data} />;
+      })}
+    </List>
+  );
 };
 
-export default withRouter(Characters);
+export default compose(withRouter, withData(BBService.getAllCharacters), withGeneralLayout())(Characters);

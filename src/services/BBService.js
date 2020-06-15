@@ -1,4 +1,5 @@
 import { episodes, quotes, characters } from "utils/dummyData";
+import { checkCategoryRelated } from "utils";
 
 const BASE = "https://www.breakingbadapi.com/api/";
 const CHARACTER_ENDPOINT = "characters/";
@@ -27,7 +28,7 @@ class BBService {
 
   getAllCharacters = async () => {
     const allCharaters = characters; //await this.getResource(CHARACTER_ENDPOINT);
-    return allCharaters.map(this._transformCharacter);
+    return allCharaters.map(this._transformCharacter).filter((char) => checkCategoryRelated(char.category));
   };
 
   getEpisode = async (id) => {
@@ -59,6 +60,7 @@ class BBService {
       status: characterItem.status,
       nickname: characterItem.nickname,
       appearance: characterItem.appearance,
+      category: characterItem.category,
     };
   }
 
