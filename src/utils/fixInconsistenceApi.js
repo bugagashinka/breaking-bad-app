@@ -15,6 +15,7 @@ const namesMap = {
   "Mike Ehrmantraut": "Mike Ehrmantraut",
   "The cousins": "Marco & Leonel Salamanca",
   "Steve Gomez": "Steven Gomez",
+  "Ken Wins": "Ken",
 };
 
 const checkCategoryRelated = (category, expected = DEFAULT_CATEGORY) => {
