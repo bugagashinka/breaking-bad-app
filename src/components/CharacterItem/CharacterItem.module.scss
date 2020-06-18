@@ -1,8 +1,8 @@
 @import "../../styles/mixins";
 
 .card {
-  @include card-base;
-  background-color: #fcfcfc;
+  @extend %card-base;
+  position: relative;
 
   &.active {
     border-width: 4px;
@@ -10,7 +10,63 @@
   }
 
   &__image {
-    height: 280px;
+    height: 300px;
     @include response-image;
   }
+}
+.details {
+  position: absolute;
+  width: 100%;
+  top: 240px;
+  min-height: 42px;
+  transition: all 0.3s;
+  background-color: #fcfcfc;
+  cursor: pointer;
+
+  &__title {
+    font-size: 16px;
+  }
+
+  &__content {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: all 1.2s;
+  }
+
+  &:hover {
+    top: 0;
+    min-height: 300px;
+    color: #000;
+    background-color: rgba(#fcfcfc, 0.7);
+
+    .details__title {
+      display: none;
+    }
+    .details__content {
+      opacity: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__fact {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  &__label {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    margin-right: auto;
+  }
+}
+
+.fact__item {
+  display: block;
 }
