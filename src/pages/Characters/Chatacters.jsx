@@ -20,8 +20,8 @@ const Characters = ({ data: characters, match: { params } }) => {
 
   return (
     <List>
-      {characters.map(({ id, name, ...data }) => {
-        const isSelected = checkIsSelected(name);
+      {characters.map(({ id, ...data }) => {
+        const isSelected = checkIsSelected(data.name);
         return <CharacterItem ref={isSelected ? activeChar : null} key={id} isActive={isSelected} {...data} />;
       })}
     </List>

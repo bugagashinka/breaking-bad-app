@@ -1,4 +1,3 @@
-import { episodes, quotes, characters } from "utils/dummyData";
 import { checkCategoryRelated } from "utils";
 
 const BASE = "https://www.breakingbadapi.com/api/";
@@ -27,7 +26,7 @@ class BBService {
   };
 
   getAllCharacters = async () => {
-    const allCharaters = characters; //await this.getResource(CHARACTER_ENDPOINT);
+    const allCharaters = await this.getResource(CHARACTER_ENDPOINT);
     return allCharaters.map(this._transformCharacter).filter((char) => checkCategoryRelated(char.category));
   };
 
@@ -37,7 +36,7 @@ class BBService {
   };
 
   getAllEpisodes = async () => {
-    const allEpisodes = episodes; //await this.getResource(EPISODE_ENDPOINT);
+    const allEpisodes = await this.getResource(EPISODE_ENDPOINT);
     return allEpisodes.map(this._transformEpisode);
   };
 
@@ -47,19 +46,20 @@ class BBService {
   };
 
   getAllQuotes = async () => {
-    const allQuotes = quotes; //await this.getResource(QUOTE_ENDPOINT);
+    const allQuotes = await this.getResource(QUOTE_ENDPOINT);
     return allQuotes.map(this._transformQuote);
   };
 
   _transformCharacter(characterItem) {
     return {
       id: characterItem.char_id,
-      name: characterItem.name,
-      birthday: characterItem.birthday,
       img: characterItem.img,
-      status: characterItem.status,
+      name: characterItem.name,
       nickname: characterItem.nickname,
-      appearance: characterItem.appearance,
+      actor: characterItem.portrayed,
+      birthday: characterItem.birthday,
+      occupation: characterItem.occupation,
+      status: characterItem.status,
       category: characterItem.category,
     };
   }
