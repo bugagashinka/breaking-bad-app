@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/bugagashinka/breaking-bad-app/static/css/main.cf1caf8d.chunk.css",
+    "main.js": "/bugagashinka/breaking-bad-app/static/js/main.75ec9c51.chunk.js",
+    "main.js.map": "/bugagashinka/breaking-bad-app/static/js/main.75ec9c51.chunk.js.map",
+    "runtime-main.js": "/bugagashinka/breaking-bad-app/static/js/runtime-main.8a8e29bd.js",
+    "runtime-main.js.map": "/bugagashinka/breaking-bad-app/static/js/runtime-main.8a8e29bd.js.map",
+    "static/js/2.b532622d.chunk.js": "/bugagashinka/breaking-bad-app/static/js/2.b532622d.chunk.js",
+    "static/js/2.b532622d.chunk.js.map": "/bugagashinka/breaking-bad-app/static/js/2.b532622d.chunk.js.map",
+    "index.html": "/bugagashinka/breaking-bad-app/index.html",
+    "precache-manifest.b049b4935234880ab994b5ffb57b4813.js": "/bugagashinka/breaking-bad-app/precache-manifest.b049b4935234880ab994b5ffb57b4813.js",
+    "service-worker.js": "/bugagashinka/breaking-bad-app/service-worker.js",
+    "static/css/main.cf1caf8d.chunk.css.map": "/bugagashinka/breaking-bad-app/static/css/main.cf1caf8d.chunk.css.map",
+    "static/js/2.b532622d.chunk.js.LICENSE.txt": "/bugagashinka/breaking-bad-app/static/js/2.b532622d.chunk.js.LICENSE.txt",
+    "static/media/bb-s1-poster.jpg": "/bugagashinka/breaking-bad-app/static/media/bb-s1-poster.4a62fd6e.jpg",
+    "static/media/bb-s2-poster.jpg": "/bugagashinka/breaking-bad-app/static/media/bb-s2-poster.052f30d1.jpg",
+    "static/media/bb-s3-poster.jpg": "/bugagashinka/breaking-bad-app/static/media/bb-s3-poster.9e94304c.jpg",
+    "static/media/bb-s4-poster.jpg": "/bugagashinka/breaking-bad-app/static/media/bb-s4-poster.9c0118e4.jpg",
+    "static/media/bb-s5-poster.jpg": "/bugagashinka/breaking-bad-app/static/media/bb-s5-poster.03cbd6f4.jpg",
+    "static/media/caffeine_structure.svg": "/bugagashinka/breaking-bad-app/static/media/caffeine_structure.86fff8bd.svg",
+    "static/media/index.scss": "/bugagashinka/breaking-bad-app/static/media/heart_breaking_bad-webfont.9da1efd4.woff2",
+    "static/media/loader.gif": "/bugagashinka/breaking-bad-app/static/media/loader.bed56ba7.gif",
+    "static/media/lsd_structure.svg": "/bugagashinka/breaking-bad-app/static/media/lsd_structure.c108a3ee.svg",
+    "static/media/methamphetamine_structure.svg": "/bugagashinka/breaking-bad-app/static/media/methamphetamine_structure.68bd1ae6.svg",
+    "static/media/smoke-element.png": "/bugagashinka/breaking-bad-app/static/media/smoke-element.c9d1f6a4.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a8e29bd.js",
+    "static/js/2.b532622d.chunk.js",
+    "static/css/main.cf1caf8d.chunk.css",
+    "static/js/main.75ec9c51.chunk.js"
+  ]
+}
