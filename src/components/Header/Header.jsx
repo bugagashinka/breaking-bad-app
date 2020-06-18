@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import stl from "./Header.module.scss";
 import classNames from "classnames";
-import SearchPanel from "components/SearchPanel";
 
 const Header = () => {
   return (
@@ -15,19 +14,24 @@ const Header = () => {
           </h1>
           <nav className={stl.menu}>
             <ul>
-              <li>
-                <NavLink to="/">Episodes</NavLink>
+              <li className={stl.menu__item}>
+                <NavLink to="/" exact activeClassName={stl.menu__item_active}>
+                  Episodes
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="/characters">Characters</NavLink>
+              <li className={stl.menu__item}>
+                <NavLink to="/characters" activeClassName={stl.menu__item_active}>
+                  Characters
+                </NavLink>
               </li>
-              <li>
-                <NavLink to="/quotes">Quotes</NavLink>
+              <li className={stl.menu__item}>
+                <NavLink to="/quotes" activeClassName={stl.menu__item_active}>
+                  Quotes
+                </NavLink>
               </li>
             </ul>
           </nav>
         </div>
-        <SearchPanel />
       </section>
     </header>
   );

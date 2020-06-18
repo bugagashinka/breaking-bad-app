@@ -11,6 +11,8 @@
 
   li {
     display: inline-block;
+    color: $color;
+    cursor: pointer;
 
     a {
       color: $color;
@@ -27,8 +29,10 @@
   background-position: center;
   background-size: cover;
 }
-@mixin card-base {
-  min-width: 200px;
+
+%card-base {
+  max-width: 200px;
+  width: 100%;
   min-height: 150px;
   text-align: center;
   border-radius: 10px;
