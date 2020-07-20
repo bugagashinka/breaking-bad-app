@@ -45,3 +45,25 @@
     bottom: 35%;
   }
 }
+
+@media (max-width: 758px) {
+  .quote {
+    margin-bottom: 0px;
+
+    &__content {
+      font-size: 16px;
+    }
+    &__shape {
+      transform: translateX(-50%) scaleY(1.7);
+      margin: 35px 0;
+    }
+
+    &__text {
+      top: 28%;
+    }
+    &__author {
+      right: 3%;
+      bottom: 30%;
+    }
+  }
+}
