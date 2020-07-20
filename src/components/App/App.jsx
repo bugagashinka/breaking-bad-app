@@ -7,8 +7,9 @@ import Background from "components/Background";
 import Error from "pages/Error";
 
 const App = () => {
+  console.log("!!!!", process.env.PUBLIC_URL);
   return (
-    <Router>
+    <Router basename={`${process.env.PUBLIC_URL}`}>
       <Background />
       <Switch>
         <Route exact path="/" component={Episodes} />
