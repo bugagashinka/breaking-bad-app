@@ -13,11 +13,18 @@
     height: 300px;
     @include response-image;
   }
+
+  @media (max-width: 768px) {
+    &__image {
+      height: 500px;
+      background-position: top center;
+    }
+  }
 }
 .details {
   position: absolute;
   width: 100%;
-  top: 240px;
+  bottom: 0;
   min-height: 42px;
   transition: all 0.3s;
   background-color: #fcfcfc;
@@ -35,7 +42,7 @@
   }
 
   &:hover {
-    top: 0;
+    bottom: 0;
     min-height: 300px;
     color: #000;
     background-color: rgba(#fcfcfc, 0.7);
