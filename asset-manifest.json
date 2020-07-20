@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/breaking-bad-app/static/css/main.8363c025.chunk.css",
-    "main.js": "/breaking-bad-app/static/js/main.75ec9c51.chunk.js",
-    "main.js.map": "/breaking-bad-app/static/js/main.75ec9c51.chunk.js.map",
+    "main.css": "/breaking-bad-app/static/css/main.a1aa2ef3.chunk.css",
+    "main.js": "/breaking-bad-app/static/js/main.8be4a467.chunk.js",
+    "main.js.map": "/breaking-bad-app/static/js/main.8be4a467.chunk.js.map",
     "runtime-main.js": "/breaking-bad-app/static/js/runtime-main.8f1ac65f.js",
     "runtime-main.js.map": "/breaking-bad-app/static/js/runtime-main.8f1ac65f.js.map",
-    "static/js/2.b532622d.chunk.js": "/breaking-bad-app/static/js/2.b532622d.chunk.js",
-    "static/js/2.b532622d.chunk.js.map": "/breaking-bad-app/static/js/2.b532622d.chunk.js.map",
+    "static/js/2.e6499e79.chunk.js": "/breaking-bad-app/static/js/2.e6499e79.chunk.js",
+    "static/js/2.e6499e79.chunk.js.map": "/breaking-bad-app/static/js/2.e6499e79.chunk.js.map",
     "index.html": "/breaking-bad-app/index.html",
-    "precache-manifest.78d11c72f9a906d0de0f92410a38dcb7.js": "/breaking-bad-app/precache-manifest.78d11c72f9a906d0de0f92410a38dcb7.js",
+    "precache-manifest.969f8433ede4308e6f8c9bafec24ab28.js": "/breaking-bad-app/precache-manifest.969f8433ede4308e6f8c9bafec24ab28.js",
     "service-worker.js": "/breaking-bad-app/service-worker.js",
-    "static/css/main.8363c025.chunk.css.map": "/breaking-bad-app/static/css/main.8363c025.chunk.css.map",
-    "static/js/2.b532622d.chunk.js.LICENSE.txt": "/breaking-bad-app/static/js/2.b532622d.chunk.js.LICENSE.txt",
+    "static/css/main.a1aa2ef3.chunk.css.map": "/breaking-bad-app/static/css/main.a1aa2ef3.chunk.css.map",
+    "static/js/2.e6499e79.chunk.js.LICENSE.txt": "/breaking-bad-app/static/js/2.e6499e79.chunk.js.LICENSE.txt",
     "static/media/bb-s1-poster.jpg": "/breaking-bad-app/static/media/bb-s1-poster.4a62fd6e.jpg",
     "static/media/bb-s2-poster.jpg": "/breaking-bad-app/static/media/bb-s2-poster.052f30d1.jpg",
     "static/media/bb-s3-poster.jpg": "/breaking-bad-app/static/media/bb-s3-poster.9e94304c.jpg",
@@ -26,8 +26,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.8f1ac65f.js",
-    "static/js/2.b532622d.chunk.js",
-    "static/css/main.8363c025.chunk.css",
-    "static/js/main.75ec9c51.chunk.js"
+    "static/js/2.e6499e79.chunk.js",
+    "static/css/main.a1aa2ef3.chunk.css",
+    "static/js/main.8be4a467.chunk.js"
   ]
 }

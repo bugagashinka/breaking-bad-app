@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a03f4f275b438233b10621df49606310",
+    "revision": "18b1b3fbf42633ec3e8720da9b423a5c",
     "url": "/breaking-bad-app/index.html"
   },
   {
-    "revision": "acf4843f72f1348ccd7a",
-    "url": "/breaking-bad-app/static/css/main.8363c025.chunk.css"
+    "revision": "73ccc785ca70a5ff0867",
+    "url": "/breaking-bad-app/static/css/main.a1aa2ef3.chunk.css"
   },
   {
-    "revision": "cfb3028856ba2d268cee",
-    "url": "/breaking-bad-app/static/js/2.b532622d.chunk.js"
+    "revision": "383fc8f325a3a04098fe",
+    "url": "/breaking-bad-app/static/js/2.e6499e79.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/breaking-bad-app/static/js/2.b532622d.chunk.js.LICENSE.txt"
+    "url": "/breaking-bad-app/static/js/2.e6499e79.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "acf4843f72f1348ccd7a",
-    "url": "/breaking-bad-app/static/js/main.75ec9c51.chunk.js"
+    "revision": "73ccc785ca70a5ff0867",
+    "url": "/breaking-bad-app/static/js/main.8be4a467.chunk.js"
   },
   {
     "revision": "c3338978726ad0cf1c10",
