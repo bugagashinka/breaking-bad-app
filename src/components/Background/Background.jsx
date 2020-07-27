@@ -11,7 +11,7 @@ const Background = () => {
   useEffect(() => {
     SmokeEffect.init(smokeHolder.current);
     SmokeEffect.animate();
-  });
+  }, []);
 
   return (
     <section className={stl.structures} ref={smokeHolder}>
